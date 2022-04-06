@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">    
+
     <title>OhMyFood</title>
+
 </head>
 <body>
     <header class="header">
-        <img src="../assets/logo/ohmyfood@2x.svg" alt="ohmyfood logo">
+        <p class="header__title font-logo">ohmyfood</p>
     </header>
 
     <main>
-        <section class="localisation"> </section>
+        <section class="localisation">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Paris, Belleville</p>
+            
+        </section>
 
         <section class="explore">
             <h1>Réservez le menu qui vous convient</h1>
@@ -31,14 +45,44 @@
         </section>
 
         <section class="restaurants">
-            <h2>Restaurants</h2>
-            <div class="restaurants-cards"></div>
-            <div class="restaurants-cards"></div>
-            <div class="restaurants-cards"></div>
-            <div class="restaurants-cards"></div>
+            <div class="sides-margin">
+                <h2>Restaurants</h2>
+                <a href="LaPaletteDuGout.html" class="restaurants__cards">
+                    <img src="../assets/restaurants/la-palette-du-gout.jpg" alt="assiete">
+                    <div>
+
+                    </div>
+                </a>
+                <a href="LaNoteEnchantee.html" class="restaurants__cards">
+                    <img src="../assets/restaurants/la-note-enchantee.jpg" alt="assiete">
+                    <div>
+
+                    </div>
+                </a>
+                <a href="ALaFrancaise.html" class="restaurants__cards">
+                    <img src="../assets/restaurants/a-la-francaise.jpg" alt="assiete">
+                    <div>
+
+                    </div>
+                </a>
+                <a href="LeDeliceDesSens.html" class="restaurants__cards">
+                    <img src="../assets/restaurants/le-delice-des-sens.jpg" alt="assiete">
+                    <div>
+
+                    </div>
+                </a>
+            </div>
         </section>
 
     </main>
 
+    <footer class="footer">
+        <p class="footer__heading">ohmyfood</p>
+        <p>Proposer un restaurant</p>
+        <p>Devenir partenaire</p>
+        <p>Mentions légales</p>
+        <p>Contact</p>
+
+    </footer>
 </body>
 </html>

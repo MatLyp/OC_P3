@@ -1,0 +1,17 @@
+.footer {
+    background-color: $clr-dark-grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__heading {
+        font-family: $heading-font-family;
+
+    }
+
+    & p {
+        @include sides-margin;
+        margin-bottom: 0;
+        color: white;
+        font-size: small;
+    }
+}
