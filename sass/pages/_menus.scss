@@ -1,0 +1,29 @@
+.heading-img-menu {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: $clr-low-grey;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+    transform: translateY(-25px);
+    
+    & h1, h2{
+        @include sides-margin;
+    }
+
+    &__cards {
+        width: auto;
+        height: 80px;
+        border: 1px solid red;
+        border-radius: 10px;
+        @include sides-margin;
+        margin-bottom: 1em;
+    }
+}
+

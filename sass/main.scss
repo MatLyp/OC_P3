@@ -1,13 +1,15 @@
 @import './utils/variables';
 @import './utils/mixins';
 
-// @import './base/normalize';
+@import './base/base';
 @import './base/typography';
 
 @import './layout/navigation';
 @import './layout/header';
 @import './layout/footer';
 
+@import './components/cards';
 @import './components/buttons';
 
 @import './pages/home';
+@import './pages/menus';
