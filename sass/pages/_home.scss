@@ -27,58 +27,48 @@
 .functioning {
     margin-top: 50px;
     margin-bottom: 50px;
-
+    @include sides-margin;
     & h2 {
-        @include sides-margin;
         margin-bottom: 2rem;
     }
+}
+
+.steps {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
     &__cards {
-        // display: inline-block;
-        width: auto;
-        height: auto;
+        width: 270px;
         border-radius: 15px;
         background-color: $clr-low-grey;
         box-shadow: 0 2px 10px $clr-shadow-grey;
-        @include sides-margin;
+        margin-left: 5px;
+        margin-right: 5px;
         margin-bottom: 1.5rem;
         
-
         & span {
             display: inline-block;
             transform: translateX(-10px);
-            // border: 1px solid blue;
             background-color: $clr-primary;
             color: white;
             width: 1.2rem;
             height: 1.2rem;
             border-radius: 50%;
             text-align: center;
+            margin: auto 0;
+        }
+
+        & i {
+            width: 20px;
+            margin: auto 4%;
         }
 
         & p {
             display: inline-block;
-            
-            // text-align: center;
-            // padding-left: auto;
-            // padding-right: auto;
-            // margin-left: auto;
-            // margin-right: auto;
         }
     }
-
-    // & ol {
-    //     border: 1px solid green;
-    //     background-position: 50 0;
-
-    //     & li {
-    //         border: 1px solid red;
-    //         // transform: translateX(-10px);
-    //         border-radius: 10px;
-    //         padding-left: 80px;
-            
-    //     }
-    // }
 }
 
 .restaurants {
