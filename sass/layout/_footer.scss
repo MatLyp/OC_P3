@@ -1,17 +1,25 @@
 .footer {
     background-color: $clr-dark-grey;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
 
-    &__heading {
-        font-family: $heading-font-family;
-
+    & i {
+        width: 20px;
+        padding-right: 10px;
+        font-size: smaller;
     }
 
     & p {
+        margin: 8px 0;
         @include sides-margin;
-        margin-bottom: 0;
         color: white;
-        font-size: small;
+        font-size: $f-small;
+        font-weight: $f-bold;
+
+        &:first-child {
+            font-family: $heading-font-family;
+            margin-bottom: 1.5rem;
+            font-size: medium;
+        }
     }
 }

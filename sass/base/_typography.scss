@@ -2,7 +2,26 @@ body {
     font-family: $body-font-family;
 }
 
+h1,
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 .font-logo {
     font-family: $heading-font-family;
-    font-size: 2em;
+    font-size: 2rem;
+}
+
+.bold {
+    font-weight: $f-bold;
+}
+
+.small {
+    font-size: $f-small;    
 }
