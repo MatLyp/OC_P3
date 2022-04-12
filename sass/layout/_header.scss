@@ -1,8 +1,14 @@
 .header {
-    // border: 1px solid red;
-    height: 4em;
+    height: 4rem;
     display: flex;
+    align-items: center;
+
     &__title {
-        margin: auto;
+        margin: 0 auto;
+    }
+
+    & i {
+        position: absolute;
+        left: 8%;
     }
 }

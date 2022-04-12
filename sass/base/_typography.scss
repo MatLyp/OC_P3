@@ -16,6 +16,12 @@ p {
 .font-logo {
     font-family: $heading-font-family;
     font-size: 2rem;
+    
+    &--menu {
+        font-family: $heading-font-family;
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
 }
 
 .bold {
@@ -25,3 +31,4 @@ p {
 .small {
     font-size: $f-small;    
 }
+
