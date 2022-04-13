@@ -67,16 +67,21 @@
 
     &__price {
         margin: auto 5px 5px 5px;
+        // flex-shrink: 0;
+        // flex-grow: 0;
+        // flex-basis: content;
     }
 
     & p {
         margin: 5px;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__check {
-        background-color: aquamarine;
-        width: 0%;
+        background-color: $clr-tertiary;
+        width: 0px;
         height: 62px;
         text-align: center;
         border-top-right-radius: 10px;
@@ -84,6 +89,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex: 0 0 auto;
+        // transform: scaleX(0);
+        // transform-origin: right;
+        // display: none;
+        transition: width 250ms;
+        
 
         & i {
             line-height: 20px;
@@ -91,9 +102,27 @@
             height: 20px;
             background-color: white;
             border-radius: 50%;
-            color: aquamarine;
+            color: $clr-tertiary;
             overflow: hidden;
-            // vertical-align: middle;
+            // transform: rotate(360deg);
+            // transition: transform 250ms 150ms;
+        }
+    }
+}
+
+.menu-cards {
+
+    &:hover {
+
+        & > .menu-cards__check {
+            // display: flex;
+            // transform: scaleX(1);
+            width: 60px;
+
+            & i {
+                transform: rotate(1turn);
+                transition: transform 400ms;
+            }
         }
     }
 }

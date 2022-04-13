@@ -282,10 +282,12 @@ p {
 .menu-cards p {
   margin: 5px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-cards__check {
-  background-color: aquamarine;
-  width: 0%;
+  background-color: #99E2D0;
+  width: 0px;
   height: 62px;
   text-align: center;
   border-top-right-radius: 10px;
@@ -293,6 +295,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
+  transition: width 250ms;
 }
 .menu-cards__check i {
   line-height: 20px;
@@ -300,8 +304,16 @@ p {
   height: 20px;
   background-color: white;
   border-radius: 50%;
-  color: aquamarine;
+  color: #99E2D0;
   overflow: hidden;
+}
+
+.menu-cards:hover > .menu-cards__check {
+  width: 60px;
+}
+.menu-cards:hover > .menu-cards__check i {
+  transform: rotate(1turn);
+  transition: transform 400ms;
 }
 
 /*# sourceMappingURL=style.css.map */
