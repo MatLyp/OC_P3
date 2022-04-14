@@ -1,3 +1,20 @@
+@keyframes cards-load {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes homepage-loading {
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 a {
   text-decoration: none;
   color: black;
@@ -84,10 +101,35 @@ p {
   border-radius: 50px;
   min-width: 11rem;
   border: none;
-  box-shadow: 0 5px 10px #cbcbcb;
+  box-shadow: 0 5px 10px #8c8c8c;
   color: white;
   background-color: #FF79DA;
   background-image: linear-gradient(170deg, #FF79DA, #9356DC 85%);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  background-image: linear-gradient(350deg, #ff93e1, #ae80e5 85%);
+  border-radius: 50px;
+  box-shadow: 0px 10px 10px #8c8c8c;
+  transition: opacity 500ms;
+}
+
+.homepage {
+  opacity: 0;
+  animation: homepage-loading 2000ms forwards;
 }
 
 .localisation {
@@ -95,7 +137,7 @@ p {
   justify-content: center;
   align-items: center;
   background-color: #e6e6e6;
-  box-shadow: inset 0 2px 2px #cbcbcb;
+  box-shadow: inset 0 2px 2px #8c8c8c;
   color: #323232;
 }
 .localisation i {
@@ -134,10 +176,13 @@ p {
   width: 270px;
   border-radius: 15px;
   background-color: #f5f5f5;
-  box-shadow: 0 2px 10px #cbcbcb;
+  box-shadow: 0 2px 10px #8c8c8c;
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  cursor: default;
 }
 .steps__cards span {
   display: inline-block;
@@ -163,11 +208,32 @@ p {
   font-weight: 500;
   padding: 0.4rem 0;
 }
+.steps__cards:hover::after {
+  opacity: 1;
+}
+.steps__cards:hover > i {
+  color: #9356DC;
+  transition: color 200ms;
+}
+.steps__cards::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-color: rgba(147, 86, 220, 0.2);
+  transition: opacity 250ms;
+}
 
 .restaurants {
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
+  padding-top: 30px;
   padding-bottom: 50px;
 }
 .restaurants h2 {
@@ -183,7 +249,7 @@ p {
   height: 250px;
   margin-bottom: 1em;
   border-radius: 10px;
-  box-shadow: 0 2px 10px #cbcbcb;
+  box-shadow: 0 2px 10px #8c8c8c;
 }
 .menus-cards img {
   width: 100%;
@@ -268,7 +334,39 @@ p {
   margin-right: 5%;
   margin-bottom: 1em;
   background-color: white;
-  box-shadow: 0 2px 10px #cbcbcb;
+  box-shadow: 0 2px 10px #8c8c8c;
+  opacity: 0;
+  animation: cards-load 1000ms both;
+}
+.menu-cards--0 {
+  animation-delay: 250ms;
+}
+.menu-cards--1 {
+  animation-delay: 450ms;
+}
+.menu-cards--2 {
+  animation-delay: 650ms;
+}
+.menu-cards--3 {
+  animation-delay: 850ms;
+}
+.menu-cards--4 {
+  animation-delay: 1050ms;
+}
+.menu-cards--5 {
+  animation-delay: 1250ms;
+}
+.menu-cards--6 {
+  animation-delay: 1450ms;
+}
+.menu-cards--7 {
+  animation-delay: 1650ms;
+}
+.menu-cards--8 {
+  animation-delay: 1850ms;
+}
+.menu-cards--9 {
+  animation-delay: 2050ms;
 }
 .menu-cards__description {
   margin: 5px;
@@ -296,7 +394,7 @@ p {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  transition: width 250ms;
+  transition: width 400ms;
 }
 .menu-cards__check i {
   line-height: 20px;

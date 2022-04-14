@@ -1,3 +1,8 @@
+.homepage {
+    opacity: 0;
+    animation: homepage-loading 2000ms forwards;
+}
+
 .localisation {
     display: flex;
     justify-content: center;
@@ -48,6 +53,9 @@
         margin-left: 5px;
         margin-right: 5px;
         margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 1;
+        cursor: default;
         
         & span {
             display: inline-block;
@@ -67,6 +75,7 @@
             width: 20px;
             margin: auto 4%;
             color: grey;
+            
         }
 
         & p {
@@ -75,6 +84,31 @@
             font-weight: $f-bold;
             padding: .4rem 0;
         }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+
+            & > i {
+                color: $clr-primary;
+                transition: color 200ms;
+            }
+        }
+
+        &::after {
+            content: "";
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: inherit;
+            background-color: rgba($clr-primary, .2);
+            transition: opacity 250ms;
+        }
     }
 }
 
@@ -82,6 +116,7 @@
     display: flex;
     flex-direction: column;
     background-color: $clr-low-grey;
+    padding-top: 30px;
     padding-bottom: 50px;
 
     & h2 {
@@ -125,5 +160,9 @@
                 margin: 0;
             }
         }        
+
     }
+
 }
+
+
