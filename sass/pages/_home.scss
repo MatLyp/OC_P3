@@ -1,7 +1,37 @@
-.homepage {
-    opacity: 0;
-    animation: homepage-loading 2000ms forwards;
-}
+// .wrapper {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: white;
+//     z-index: 5;
+//     animation: wrapper-fade 2000ms linear forwards;
+// }   
+
+// .loader {
+//     &__container {
+//         display: flex;
+//         align-items: flex-end;
+//         width: 30px;
+//         height: 50px;
+//         border-bottom: 5px solid $clr-tertiary;
+//         border-radius: 10%;
+//         transform-origin: center top;
+//         position: fixed;
+//         top: 50vmin;
+//         z-index: 10;
+//         animation: loading-spinner 800ms linear 5;
+//     }
+
+//     // &__spinner {
+//     //     width: 25px;
+//     //     height: 5px;
+//     //     border-radius: 3px;
+//     //     vertical-align: bottom;
+//     //     background-color: $clr-tertiary;
+//     // }
+// }
 
 .localisation {
     display: flex;
@@ -121,6 +151,13 @@
 
     & h2 {
         @include sides-margin;
+        width: 100%;
+    }
+
+    @include desktop-bp {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
 }
@@ -161,6 +198,13 @@
             }
         }        
 
+    }
+
+    @include desktop-bp {
+        width: 45%;
+        
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
 }

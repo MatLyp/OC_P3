@@ -2,3 +2,21 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+
+@mixin mobile-bp {
+    @media screen and (max-width: map-get($breakpoints, mobile-max)) {
+        @content;
+    }
+}
+
+@mixin tablet-bp {
+    @media screen and (min-width: map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)) {
+        @content;
+    }
+}
+
+@mixin desktop-bp {
+    @media screen and (min-width: map-get($breakpoints, desktop-min)) {
+        @content;
+    }
+}

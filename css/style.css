@@ -7,12 +7,28 @@
     transform: translateY(0px);
   }
 }
-@keyframes homepage-loading {
-  99% {
-    opacity: 0;
+@keyframes loading-spinner {
+  0% {
+    transform: translate(0px, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(50vw, 0) rotate(0deg);
+    border-bottom: 5px solid #FF79DA;
+  }
+  66% {
+    transform: translate(50vw, 0) rotate(-360deg);
+    border-bottom: 5px solid #9356DC;
   }
   100% {
+    transform: translate(100vw, 0) rotate(-360deg);
+  }
+}
+@keyframes wrapper-fade {
+  99% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 a {
@@ -127,11 +143,6 @@ p {
   transition: opacity 500ms;
 }
 
-.homepage {
-  opacity: 0;
-  animation: homepage-loading 2000ms forwards;
-}
-
 .localisation {
   display: flex;
   justify-content: center;
@@ -239,6 +250,14 @@ p {
 .restaurants h2 {
   margin-left: 5%;
   margin-right: 5%;
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .menus-cards {
@@ -277,6 +296,13 @@ p {
 .menus-cards__description div p {
   margin: 0;
 }
+@media screen and (min-width: 769px) {
+  .menus-cards {
+    width: 45%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 
 .heading-img-menu {
   height: 160px;
@@ -305,6 +331,14 @@ p {
   margin-right: 5%;
   font-size: 1rem;
   font-weight: 300;
+  width: 90%;
+}
+@media screen and (min-width: 769px) {
+  .menu__sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .underline {
@@ -405,7 +439,26 @@ p {
   color: #99E2D0;
   overflow: hidden;
 }
+@media screen and (min-width: 769px) {
+  .menu-cards {
+    width: 44%;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  .menu-cards:nth-child(odd) {
+    margin-left: 1%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .menu-cards:nth-child(even) {
+    margin-right: 1%;
+  }
+}
 
+.menu-cards:hover {
+  cursor: pointer;
+}
 .menu-cards:hover > .menu-cards__check {
   width: 60px;
 }

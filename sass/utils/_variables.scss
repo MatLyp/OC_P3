@@ -14,3 +14,10 @@ $f-bold: 500;
 $f-small: .9rem;
 
 $nbr-menu-card-max: 10;
+
+$breakpoints: (
+    mobile-max: 480px,
+    tablet-min: 481px,
+    tablet-max: 768px,
+    desktop-min: 769px
+);
