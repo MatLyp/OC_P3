@@ -5,6 +5,11 @@
 
     &__title {
         margin: 0 auto;
+        
+        &--anim {
+            z-index: 3;
+            animation: logo-animation $load-anim-duration forwards;
+        }
     }
 
     & i {

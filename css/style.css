@@ -1,3 +1,47 @@
+@keyframes loading-spinner {
+  0% {
+    transform: translate(0px, 60vh) rotate(0deg);
+  }
+  33% {
+    transform: translate(50vw, 60vh) rotate(0deg);
+    border-bottom: 5px solid #FF79DA;
+  }
+  66% {
+    transform: translate(50vw, 60vh) rotate(-360deg);
+    border-bottom: 5px solid #99E2D0;
+  }
+  100% {
+    transform: translate(100vw, 60vh) rotate(-360deg);
+  }
+}
+@keyframes wrapper-fade {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes logo-animation {
+  0% {
+    transform: translateY(40vh);
+    color: #FF79DA;
+  }
+  40% {
+    color: #99E2D0;
+  }
+  70% {
+    transform: translateY(40vh);
+    color: #9356DC;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @keyframes cards-load {
   0% {
     transform: translateY(20px);
@@ -7,28 +51,9 @@
     transform: translateY(0px);
   }
 }
-@keyframes loading-spinner {
-  0% {
-    transform: translate(0px, 0) rotate(0deg);
-  }
-  33% {
-    transform: translate(50vw, 0) rotate(0deg);
-    border-bottom: 5px solid #FF79DA;
-  }
-  66% {
-    transform: translate(50vw, 0) rotate(-360deg);
-    border-bottom: 5px solid #9356DC;
-  }
-  100% {
-    transform: translate(100vw, 0) rotate(-360deg);
-  }
-}
-@keyframes wrapper-fade {
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+@keyframes no-scroll {
+  0%, 100% {
+    overflow-y: hidden;
   }
 }
 a {
@@ -77,6 +102,10 @@ p {
 .header__title {
   margin: 0 auto;
 }
+.header__title--anim {
+  z-index: 3;
+  animation: logo-animation 2500ms forwards;
+}
 .header i {
   position: absolute;
   left: 8%;
@@ -96,9 +125,12 @@ p {
   margin: 8px 0;
   margin-left: 5%;
   margin-right: 5%;
-  color: white;
   font-size: 0.9rem;
   font-weight: 500;
+  color: white;
+}
+.footer p a {
+  color: inherit;
 }
 .footer p:first-child {
   font-family: "Shrikhand", cursive;
@@ -141,6 +173,31 @@ p {
   border-radius: 50px;
   box-shadow: 0px 10px 10px #8c8c8c;
   transition: opacity 500ms;
+}
+
+body {
+  animation: no-scroll 2500ms backwards;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  z-index: 2;
+  animation: wrapper-fade 300ms 2500ms linear both;
+}
+.loader__spinner {
+  width: 20px;
+  height: 50px;
+  border-bottom: 0px solid #9356DC;
+  border-radius: 10%;
+  transform-origin: center top;
+  position: fixed;
+  left: -20px;
+  animation: loading-spinner 1150ms linear both 2;
 }
 
 .localisation {

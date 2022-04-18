@@ -12,9 +12,13 @@
     & p {
         margin: 8px 0;
         @include sides-margin;
-        color: white;
         font-size: $f-small;
         font-weight: $f-bold;
+        color: white;
+
+        & a {
+            color: inherit;
+        }
 
         &:first-child {
             font-family: $heading-font-family;

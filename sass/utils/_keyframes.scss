@@ -1,3 +1,51 @@
+@keyframes loading-spinner {
+
+    0% {
+        transform: translate(0px,60vh) rotate(0deg);        
+    }
+    33% {
+        transform: translate(50vw,60vh) rotate(0deg);
+        border-bottom: 5px solid $clr-secondary;
+    }
+    66% {
+        transform: translate(50vw,60vh) rotate(-360deg);
+        border-bottom: 5px solid $clr-tertiary;
+    }
+    100% {
+        transform: translate(100vw,60vh) rotate(-360deg);
+    }
+    
+}
+@keyframes wrapper-fade {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        z-index: 2;
+    }
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+@keyframes logo-animation {
+    0% {
+        transform: translateY(40vh);
+        color: $clr-secondary;
+    }
+    40% {
+        color: $clr-tertiary;   
+    }
+    70% {
+        transform: translateY(40vh);
+        color: $clr-primary;    
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
 @keyframes cards-load {
     0% {
         transform: translateY(20px);
@@ -8,32 +56,8 @@
     }
 }
 
-@keyframes loading-spinner {
-
-    0% {
-        transform: translate(0px,0) rotate(0deg)
-    }
-    33% {
-        transform: translate(50vw,0) rotate(0deg);
-        border-bottom: 5px solid $clr-secondary;
-    }
-    66% {
-         transform: translate(50vw,0) rotate(-360deg);
-         border-bottom: 5px solid $clr-primary;
-    }
-    100% {
-        transform: translate(100vw,0) rotate(-360deg);
-        
-    }
-    
-}
-
-@keyframes wrapper-fade {
-   
-    99% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
+@keyframes no-scroll {
+    0%,100% {
+        overflow-y: hidden;
     }
 }
