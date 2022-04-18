@@ -23,4 +23,4 @@ $f-small: .9rem;
 $nbr-menu-card-max: 10;
 
 $load-anim-duration: 2500ms;
-$load-spinner-duration: $load-anim-duration / 2 - 100ms;
+$load-spinner-duration: calc($load-anim-duration / 2 - 100ms);

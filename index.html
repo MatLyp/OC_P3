@@ -17,7 +17,7 @@
     <title>OhMyFood</title>
 
 </head>
-<body class="homepage">
+<body>
     
     <header class="header">
         <p class="header__title header__title--anim font-logo">ohmyfood</p>
@@ -30,11 +30,10 @@
             <div class="loader__logo"></div>
         </div>
 
-        <section class="localisation">
+        <div class="localisation">
             <i class="fa-solid fa-location-dot"></i>
             <p class="bold small">Paris, Belleville</p>
-
-        </section>
+        </div>
 
         <section class="explore">
             <h1>Réservez le menu qui vous convient</h1>
@@ -74,12 +73,10 @@
                         <p class="bold">La palette du goût</p>
                         <p>Ménilmontant</p>
                     </div>
-                    <!-- <span class="fa-stack fa-2x"> -->
-                        <i class="fa-regular fa-heart fa-lg"></i>
-                        <!-- <i class="fa-solid fa-heart fa-lg"></i> -->
-                    <!-- </span> -->
-                    <!-- <div class="heart">
-                    </div> -->
+                    <span class="fav-icon">
+                        <i class="fa-solid fa-heart fa-lg fav-icon__full"></i>
+                        <i class="fa-regular fa-heart fa-lg fav-icon__empty"></i>
+                    </span>
                 </div>
             </a>
             <a href="html/LaNoteEnchantee.html" class="menus-cards">
@@ -89,7 +86,10 @@
                         <p class="bold">La note enchantée</p>
                         <p>Charonne</p>
                     </div>
-                    <i class="fa-regular fa-heart fa-lg"></i>
+                    <span class="fav-icon">
+                        <i class="fa-solid fa-heart fa-lg fav-icon__full"></i>
+                        <i class="fa-regular fa-heart fa-lg fav-icon__empty"></i>
+                    </span>
                 </div>
             </a>
             <a href="html/ALaFrancaise.html" class="menus-cards">
@@ -99,7 +99,10 @@
                         <p class="bold">À la française</p>
                         <p>Cité Rouge</p>
                     </div>
-                    <i class="fa-regular fa-heart fa-lg"></i>
+                    <span class="fav-icon">
+                        <i class="fa-solid fa-heart fa-lg fav-icon__full"></i>
+                        <i class="fa-regular fa-heart fa-lg fav-icon__empty"></i>
+                    </span>
                 </div>
             </a>
             <a href="html/LeDeliceDesSens.html" class="menus-cards">
@@ -109,7 +112,10 @@
                         <p class="bold">Le délice des sens</p>
                         <p>Folie-Méricourt</p>
                     </div>
-                    <i class="fa-regular fa-heart fa-lg"></i>
+                    <span class="fav-icon">
+                        <i class="fa-solid fa-heart fa-lg fav-icon__full"></i>
+                        <i class="fa-regular fa-heart fa-lg fav-icon__empty"></i>
+                    </span>
                 </div>
             </a>
         </section>
@@ -121,7 +127,7 @@
         <p><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></p>
         <p><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></p>
         <p><a href="#">Mentions légales</a></p>
-        <p><a href="mailto: someone@example.com">Contact</a></p>
+        <p><a href="mailto:contact@ohmyfood.com">Contact</a></p>
 
     </footer>
 </body>

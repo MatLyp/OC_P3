@@ -1,17 +1,6 @@
-@keyframes loading-spinner {
-  0% {
-    transform: translate(0px, 60vh) rotate(0deg);
-  }
-  33% {
-    transform: translate(50vw, 60vh) rotate(0deg);
-    border-bottom: 5px solid #FF79DA;
-  }
-  66% {
-    transform: translate(50vw, 60vh) rotate(-360deg);
-    border-bottom: 5px solid #99E2D0;
-  }
-  100% {
-    transform: translate(100vw, 60vh) rotate(-360deg);
+@keyframes no-scroll {
+  0%, 100% {
+    overflow-y: hidden;
   }
 }
 @keyframes wrapper-fade {
@@ -42,6 +31,22 @@
     transform: translateY(0);
   }
 }
+@keyframes loading-spinner {
+  0% {
+    transform: translate(0px, 60vh) rotate(0deg);
+  }
+  33% {
+    transform: translate(50vw, 60vh) rotate(0deg);
+    border-bottom: 5px solid #FF79DA;
+  }
+  66% {
+    transform: translate(50vw, 60vh) rotate(-360deg);
+    border-bottom: 5px solid #99E2D0;
+  }
+  100% {
+    transform: translate(100vw, 60vh) rotate(-360deg);
+  }
+}
 @keyframes cards-load {
   0% {
     transform: translateY(20px);
@@ -49,11 +54,6 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
-  }
-}
-@keyframes no-scroll {
-  0%, 100% {
-    overflow-y: hidden;
   }
 }
 a {
@@ -325,7 +325,10 @@ body {
   height: 250px;
   margin-bottom: 1em;
   border-radius: 10px;
-  box-shadow: 0 2px 10px #8c8c8c;
+  box-shadow: 0 2px 10px 1px #8c8c8c;
+}
+.menus-cards:hover {
+  box-shadow: 0 2px 10px 5px #8c8c8c;
 }
 .menus-cards img {
   width: 100%;
@@ -359,6 +362,35 @@ body {
     margin-left: 10px;
     margin-right: 10px;
   }
+}
+
+.fav-icon__empty {
+  transform: translate(-12px, 0);
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+.fav-icon__empty--menu {
+  transform: translate(0, -9px);
+}
+.fav-icon__full {
+  transform: translate(12px, 0);
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+.fav-icon__full::before {
+  background: -webkit-gradient(linear, center top, center bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fav-icon__full--menu {
+  transform: translate(0, 9px);
+}
+.fav-icon:hover > .fav-icon__empty {
+  opacity: 0;
+}
+.fav-icon:hover > .fav-icon__full {
+  opacity: 1;
 }
 
 .heading-img-menu {
