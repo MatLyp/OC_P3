@@ -10,11 +10,12 @@
     }
 
     & p {
-        margin: 8px 0;
         @include sides-margin;
         font-size: $f-small;
         font-weight: $f-bold;
         color: white;
+        margin-top: 0%;
+        margin-bottom: 10px;
 
         & a {
             color: inherit;
@@ -22,8 +23,43 @@
 
         &:first-child {
             font-family: $heading-font-family;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.3rem;
             font-size: medium;
         }
     }
+
+    @include tablet-bp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        & p {
+            &:not(:nth-child(1)) {
+                width: 40%;        
+                @include sides-margin
+            }
+        }   
+        
+        &__heading {
+            width: 90%;
+            @include sides-margin;
+        }
+    }
+
+    @include desktop-bp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        & p {
+            margin-right: auto; 
+        }
+    
+        &__heading {
+            width: 90%;
+            @include sides-margin;
+        }
+    }
+
+
 }
