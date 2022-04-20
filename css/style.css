@@ -175,7 +175,7 @@ p {
   transition: opacity 500ms;
 }
 
-body {
+html, body {
   animation: no-scroll 2500ms backwards;
 }
 
