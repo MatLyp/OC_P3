@@ -1,3 +1,5 @@
+//#region ----- animation loading spinner ----- //
+
 // html, body {
 //     animation: no-scroll $load-anim-duration backwards;
 // }
@@ -23,7 +25,9 @@
         animation: loading-spinner $load-spinner-duration linear both 2;
     }
 }
+//#endregion ----- animation loading spinner ----- //
 
+//#region ----- section localisation -----//
 .localisation {
     display: flex;
     justify-content: center;
@@ -36,7 +40,9 @@
         margin-right: 1em;
     }
 }
+//#endregion ----- section localisation -----//
 
+//#region ----- section en-tête/description(explore) -----//
 .explore {
     display: flex;
     flex-direction: column;
@@ -50,7 +56,9 @@
     }
     
 }
+//#endregion ----- section en-tête/description -----//
 
+//#region ----- section "Fonctionnement" -----//
 .functioning {
     margin-top: 50px;
     margin-bottom: 40px;
@@ -144,7 +152,9 @@
         }
     }
 }
+//#endregion ----- section "Fonctionnement" -----//
 
+//#region----- section "Restaurants" -----//
 .restaurants {
     display: flex;
     flex-direction: column;
@@ -163,8 +173,8 @@
         justify-content: center;
     }
 }
-
-.new-restaurant {
+    
+.new-restaurant-elem {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -224,41 +234,4 @@
         margin-right: 10px;
     }
 }
-
-.fav-icon {
-    &__empty {
-        transform: translate(-12px, 0);
-        opacity: 1;
-        transition: opacity 1000ms;
-
-        &--menu {
-            transform: translate(0, -9px);
-        }
-    }
-    &__full {
-        transform: translate(12px, 0);
-        opacity: 0;
-        transition: opacity 1000ms;
-
-        &::before {
-            background: -webkit-gradient(linear, center top, center bottom, from($clr-primary), to($clr-secondary));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }  
-
-        &--menu {
-            transform: translate(0, 9px);
-        }
-    }
-
-    &:hover {
-        & > .fav-icon__empty {
-            opacity: 0;
-        }
-        & > .fav-icon__full {
-            opacity: 1;
-        }
-    }
-}
-
+//#endregion ----- section "Restaurants" -----//

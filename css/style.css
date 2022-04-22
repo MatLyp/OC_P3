@@ -208,6 +208,41 @@ p {
   transition: opacity 500ms;
 }
 
+.fav-icon--menu {
+  margin-right: 4%;
+}
+.fav-icon__empty {
+  transform: translate(-12px, 0);
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+.fav-icon__empty--menu {
+  transform: translate(0, -9px);
+}
+.fav-icon__full {
+  transform: translate(12px, 0);
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+.fav-icon__full::before {
+  background: -webkit-gradient(linear, center top, center bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fav-icon__full--menu {
+  transform: translate(0, 9px);
+}
+.fav-icon:hover {
+  cursor: pointer;
+}
+.fav-icon:hover > .fav-icon__empty {
+  opacity: 0;
+}
+.fav-icon:hover > .fav-icon__full {
+  opacity: 1;
+}
+
 .loader {
   position: fixed;
   top: 0;
@@ -357,7 +392,7 @@ p {
   }
 }
 
-.new-restaurant {
+.new-restaurant-elem {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -414,35 +449,6 @@ p {
     margin-left: 10px;
     margin-right: 10px;
   }
-}
-
-.fav-icon__empty {
-  transform: translate(-12px, 0);
-  opacity: 1;
-  transition: opacity 1000ms;
-}
-.fav-icon__empty--menu {
-  transform: translate(0, -9px);
-}
-.fav-icon__full {
-  transform: translate(12px, 0);
-  opacity: 0;
-  transition: opacity 1000ms;
-}
-.fav-icon__full::before {
-  background: -webkit-gradient(linear, center top, center bottom, from(#9356DC), to(#FF79DA));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.fav-icon__full--menu {
-  transform: translate(0, 9px);
-}
-.fav-icon:hover > .fav-icon__empty {
-  opacity: 0;
-}
-.fav-icon:hover > .fav-icon__full {
-  opacity: 1;
 }
 
 .heading-img-menu {
@@ -580,6 +586,16 @@ p {
   color: #99E2D0;
   overflow: hidden;
 }
+.menu-cards:hover {
+  cursor: pointer;
+}
+.menu-cards:hover > .menu-cards__check {
+  width: 60px;
+}
+.menu-cards:hover > .menu-cards__check i {
+  transform: rotate(1turn);
+  transition: transform 400ms;
+}
 @media screen and (min-width: 769px) {
   .menu-cards {
     width: 44%;
@@ -595,17 +611,6 @@ p {
   .menu-cards:nth-child(even) {
     margin-right: 1%;
   }
-}
-
-.menu-cards:hover {
-  cursor: pointer;
-}
-.menu-cards:hover > .menu-cards__check {
-  width: 60px;
-}
-.menu-cards:hover > .menu-cards__check i {
-  transform: rotate(1turn);
-  transition: transform 400ms;
 }
 
 /*# sourceMappingURL=style.css.map */

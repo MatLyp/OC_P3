@@ -1,0 +1,42 @@
+    // ----- icon favorite-heart + fill animation ----- //
+    .fav-icon {
+        &--menu {
+            margin-right: 4%;
+        }
+
+        &__empty {
+            transform: translate(-12px, 0);
+            opacity: 1;
+            transition: opacity 1000ms;
+    
+            &--menu {
+                transform: translate(0, -9px);
+            }
+        }
+        &__full {
+            transform: translate(12px, 0);
+            opacity: 0;
+            transition: opacity 1000ms;
+    
+            &::before {
+                background: -webkit-gradient(linear, center top, center bottom, from($clr-primary), to($clr-secondary));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }  
+    
+            &--menu {
+                transform: translate(0, 9px);
+            }
+        }
+        &:hover {
+            cursor: pointer;
+
+            & > .fav-icon__empty {
+                opacity: 0;
+            }
+            & > .fav-icon__full {
+                opacity: 1;
+            }
+        }
+    }

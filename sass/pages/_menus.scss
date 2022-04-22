@@ -1,3 +1,4 @@
+//#region ----- image banner ----- //
 .heading-img-menu {
     height: 230px;
     
@@ -7,7 +8,9 @@
         object-fit: cover;
     }
 }
+//#endregion ----- image banner ----- //
 
+//#region ----- menu ----- //
 .menu {
     display: flex;
     flex-direction: column;
@@ -36,7 +39,7 @@
         }
     }
 }
-
+    // ----- small line under title section ----- //
 .underline {
     width: 40px;
     height: 3px;
@@ -44,7 +47,7 @@
     display: block;
     margin-top: 5px;
 }
-
+    // ----- container restaurant name / favorite icon ----- //
 .menu-heading-cont {
     display: flex;
     align-items: center;
@@ -54,7 +57,7 @@
         margin-right: 6%;
     }
 }
-
+    // ----- menu elements ----- //
 .menu-cards {
     display: flex;
     align-items: center;
@@ -68,6 +71,7 @@
     box-shadow: 0 2px 10px $clr-shadow-grey;
     opacity: 0;
     animation: cards-load 1000ms both;
+        // ----- loop on every elements to delay their display ----- //
     @for $i from 0 to $nbr-menu-card-max {
         &--#{$i} {
             animation-delay: 200ms * $i + 250;
@@ -91,7 +95,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
+        // ----- selection/check element ----- //
     &__check {
         background-color: $clr-tertiary;
         width: 0px;
@@ -116,6 +120,19 @@
         }
     }
 
+    &:hover {
+        cursor: pointer;
+
+        & > .menu-cards__check {
+            width: 60px;
+
+            & i {
+                transform: rotate(1turn);
+                transition: transform 400ms;
+            }
+        }
+    }
+        // ----- breakpoint/responsive ----- //
     @include desktop-bp {
         width: 44%;
         margin-right: auto;
@@ -133,18 +150,4 @@
     }
 
 }
-
-.menu-cards {
-    &:hover {
-        cursor: pointer;
-
-        & > .menu-cards__check {
-            width: 60px;
-
-            & i {
-                transform: rotate(1turn);
-                transition: transform 400ms;
-            }
-        }
-    }
-}
+//#endregion ----- menu ----- //
